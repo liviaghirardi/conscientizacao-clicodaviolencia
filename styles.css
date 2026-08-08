@@ -1,0 +1,336 @@
+/* Variáveis de Cores e Tipografia */
+:root {
+    --bg-color: #FDF9FA;
+    --bg-light: #F4EBEB;
+    --primary-color: #591E2A; /* Bordô escuro */
+    --primary-hover: #451620;
+    --danger-color: #C32F3A;
+    --text-color: #333333;
+    --text-light: #666666;
+    --white: #FFFFFF;
+    --font-family: 'Georgia', serif; /* Fontes com serifa transmitem a seriedade do layout */
+    --font-sans: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo, .quote-box {
+    font-family: var(--font-family);
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* Header */
+header {
+    background-color: var(--bg-color);
+    padding: 20px 0;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Botões */
+.btn-primary, .btn-outline {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#btn-sair-rapido {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--danger-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Tipos de Violência (Cards) */
+.text-center {
+    text-align: center;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin: 15px auto 50px auto;
+    color: var(--text-light);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    text-align: center;
+}
+
+.card .icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Violência Invisível */
+.invisible-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.invisible-image, .invisible-text {
+    flex: 1;
+}
+
+.invisible-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.invisible-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.checklist {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.checklist li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checklist i {
+    color: var(--primary-color);
+    margin-top: 4px;
+}
+
+.quote-box {
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 30px;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Apoio */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.support-card i {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-color);
+    padding: 40px 0;
+    border-top: 1px solid #EAEAEA;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-logo-area p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+.footer-logo-area .copyright {
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 40px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .hero, .invisible-section {
+        flex-direction: column;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        display: none; /* Em um projeto real, você adicionaria um menu hamburger aqui */
+    }
+    
+    #btn-sair-rapido {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+}

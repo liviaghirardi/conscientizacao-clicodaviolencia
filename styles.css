@@ -376,27 +376,84 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsividade Básica */
+/* =========================================
+   Responsividade Completa (Celulares e Tablets)
+   ========================================= */
 @media (max-width: 768px) {
+    
+    /* 1. Espaçamentos Gerais */
+    .section-padding {
+        padding: 50px 0; /* Diminui o espaço em branco gigante nas laterais/topo do celular */
+    }
+
+    /* 2. Cabeçalho e Menu */
+    header .header-content {
+        justify-content: center; /* Centraliza a logo */
+    }
+    nav {
+        display: none; /* Esconde o menu para não quebrar a tela (precisaria de um menu hambúrguer) */
+    }
+    header .btn-primary {
+        display: none; /* Esconde o botão do topo para economizar espaço */
+    }
+
+    /* 3. Hero Section (Início) */
     .hero, .invisible-section {
         flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
     
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 2.2rem; /* Texto um pouco menor */
     }
     
-    nav {
-        display: none;
+    .hero-buttons {
+        flex-direction: column; /* Coloca um botão em cima do outro */
+        gap: 15px;
+    }
+
+    /* 4. Subtítulos e Textos */
+    .subtitle {
+        text-align: center !important;
+        margin-bottom: 30px !important;
+    }
+
+    .invisible-text ul {
+        text-align: left; /* Mantém a lista alinhada à esquerda para boa leitura */
+    }
+
+    /* 5. Páginas de Detalhes (Violência Física, Psicológica, etc.) */
+    /* Sobrescreve os estilos inline do HTML para não ficar exprimido no celular */
+    main > div[style*="background: var(--white)"] {
+        padding: 25px !important; 
+    }
+    h1[style*="font-size: 2.5rem"] {
+        font-size: 1.8rem !important;
+    }
+
+    /* 6. Rodapé (Footer) */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
     
+    .footer-links {
+        grid-template-columns: 1fr; /* Coloca os links do rodapé em uma única coluna */
+        width: 100%;
+    }
+
+    /* 7. Botão de Sair Rápido (CRÍTICO) */
     #btn-sair-rapido {
         top: auto;
         bottom: 20px;
         right: 20px;
+        padding: 15px 25px; /* Fica um pouco maior para ser mais fácil tocar com o dedo */
+        border-radius: 50px; /* Deixa arredondado estilo pílula */
+        font-size: 16px;
     }
-} /* <- ESSA É A CHAVE QUE FALTAVA PARA FECHAR O MODO CELULAR! */
-
+}
 
 /* Página da Equipe (Agora fora do modo celular) */
 .team-grid {

@@ -184,6 +184,14 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para o fundo */
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.card-content {
+    margin-bottom: 20px;
 }
 
 .card .icon {
@@ -207,6 +215,13 @@ nav a:hover {
 .card p {
     font-size: 0.9rem;
     color: var(--text-light);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 13px;
+    align-self: center; /* Centraliza o botão */
+    margin-top: auto;
 }
 
 /* Violência Invisível */

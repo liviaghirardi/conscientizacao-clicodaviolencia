@@ -259,11 +259,12 @@ nav a:hover {
 }
 
 /* Apoio */
+/* Apoio */
 .support-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 800px;
+    max-width: 1000px; /* Aumentado para acomodar os 3 cards */
     margin: 0 auto;
 }
 

@@ -387,7 +387,7 @@ footer {
     }
     
     nav {
-        display: none; /* Em um projeto real, você adicionaria um menu hamburger aqui */
+        display: none;
     }
     
     #btn-sair-rapido {
@@ -395,8 +395,10 @@ footer {
         bottom: 20px;
         right: 20px;
     }
+} /* <- ESSA É A CHAVE QUE FALTAVA PARA FECHAR O MODO CELULAR! */
 
-/* Página da Equipe */
+
+/* Página da Equipe (Agora fora do modo celular) */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -405,8 +407,11 @@ footer {
 }
 
 .team-card {
+    background: var(--white);
     text-align: center;
     padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
 .team-avatar {
@@ -431,5 +436,4 @@ footer {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-} 
 }
